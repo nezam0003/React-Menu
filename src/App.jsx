@@ -3,10 +3,10 @@ import Categories from "./Categories";
 import Menu from "./Menu";
 import items from "./data";
 
-const allCategories = ["all", ...new Set(items.map((item) => item.category))];
+const categories = ["all", ...new Set(items.map((item) => item.category))];
 const App = () => {
   const [menuItems, setMenuItems] = useState(items);
-  const [categories, setCategories] = useState(allCategories);
+  // const [categories, setCategories] = useState(allCategories);
 
   const filterItems = (category) => {
     if (category === "all") {
